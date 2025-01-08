@@ -1,27 +1,27 @@
-# shell shortcuts
-alias ls='ls --color=auto'
-alias ll='ls -ltr'
-alias c='clear'
-alias l='ls -1'
-alias atomic='cd ~/atomic/'
-alias g='git'
-alias jacob='git branch jacob && git checkout jacob'
-alias ato='atomic'
-alias ll='ls -ltr'
-alias l='ls -1'
-alias gp='git push'
-alias gc='git commit -m'
-alias jacob='git branch jacob && git checkout jacob'
-alias cat='bat'
-alias ccat='/bin/cat'
-alias c='clear'
-alias devops='source ~/.devops/bin/activate'
+#
+# ~/.zshrc
+#
 
+# Key bindings for Ctrl + Left and Ctrl + Right
+bindkey '^[[1;5C' forward-word  # Ctrl + Right
+bindkey '^[[1;5D' backward-word # Ctrl + Left
+
+# Infinite history settings
+HISTFILE=~/.zsh_history       # Location of the history file
+HISTSIZE=1000000000           # Unlimited in-memory history size
+SAVEHIST=1000000000           # Unlimited on-disk history size
+setopt append_history         # Append history to file (don't overwrite)
+setopt inc_append_history     # Write to history immediately
+setopt share_history          # Share history across multiple sessions
+
+# Source aliases from .shell_aliases
+if [ -f ~/.shell_aliases ]; then
+  source ~/.shell_aliases
+fi
+
+# Shell prompt
+eval "$(starship init zsh)"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-eval "$(starship init zsh)"
-
+# Path
 export PATH=$HOME/.local/bin:$PATH

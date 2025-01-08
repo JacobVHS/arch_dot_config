@@ -1,0 +1,26 @@
+# shell shortcuts
+alias ls='ls --color=auto'
+alias ll='ls -ltr'
+alias l='ls -1'
+alias c='clear'
+
+# Directories
+alias atomic='cd ~/atomic/'
+alias ato='atomic'
+
+# Git Commands
+alias g='git'
+alias gp='git push'
+alias gc='git commit -m'
+alias jacob='git branch jacob && git checkout jacob'
+
+# Cat print text
+alias cat='bat'
+alias ccat='/bin/cat'
+alias grep='grep --color=auto'
+
+# Python Environments
+alias devops='source ~/.devops/bin/activate'
+
+# Search and open neovim
+alias open='nvim $(fzf)'

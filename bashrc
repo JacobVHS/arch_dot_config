@@ -5,6 +5,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-PS1='[\u@\h \W]\$ '
+# Source aliases from .shell_aliases
+if [ -f ~/.shell_aliases ]; then
+  source ~/.shell_aliases
+fi
+
+eval "$(starship init bash)"

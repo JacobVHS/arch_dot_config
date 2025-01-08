@@ -55,6 +55,11 @@ else
     fi
 fi
 
+sudo pacman -S git fzf neovim bat --noconfirm
+
 # Create symlinks for bashrc and zshrc
-ln -sf "$HOMEDIR/.zshrc" "$HOMEDIR/.config/zshrc"
-ln -sf "$HOMEDIR/.bashrc" "$HOMEDIR/.config/bashrc"
+ln -s "$HOMEDIR/.config/zshrc" "$HOMEDIR/.zshrc"
+ln -s "$HOMEDIR/.config/bashrc" "$HOMEDIR/.bashrc"
+ln -s "$HOMEDIR/.config/shell_aliases" "$HOMEDIR/.shell_aliases"
+# Generate bat cache
+bat cache --build
