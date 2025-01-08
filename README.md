@@ -2,6 +2,9 @@
 
 This repository contains the configuration files for managing an Arch Linux setup. The provided script automates the process of syncing these configuration files with a GitHub repository and creating symbolic links for `.bashrc` and `.zshrc` files.
 
+## Appearance
+![Alt text](example_img/hyprland_example.png)
+
 ## Features
 
 - Automatically clones the configuration repository if not present.
