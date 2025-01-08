@@ -55,7 +55,8 @@ else
     fi
 fi
 
-sudo pacman -S git fzf neovim bat --noconfirm
+REQUIRED_PACKAGES="firefox unzip wofi git man starship zsh zsh-syntax-highlighting neovim wayabr waybar hyprpaper fastfetch fzf vscodium bat tree bluez bluez-utils tofi paru btop podman python-virtualenv steam ttf-liberation lib32-mesa go ntp nmap kubectl helm rsync vscodium grim slurp cargo"
+sudo pacman -S $REQUIRED_PACKAGES --noconfirm
 
 # Create symlinks for bashrc and zshrc
 ln -s "$HOMEDIR/.config/zshrc" "$HOMEDIR/.zshrc"
