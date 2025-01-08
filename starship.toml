@@ -1,0 +1,99 @@
+add_newline = true
+command_timeout = 2000
+
+format = """$env_var$os$username$hostname$kubernetes$directory$git_branch$git_status$python
+$character
+"""
+
+# Apply Catppuccin Mocha palette
+"$schema" = 'https://starship.rs/config-schema.json'
+palette = "catppuccin_mocha"
+
+[character]
+success_symbol = "[[󰀶](green) ❯](peach)"
+error_symbol = "[[󰀶](red) ❯](peach)"
+vimcmd_symbol = "[󰀶 ❮](subtext1)"
+
+[env_var]
+symbol = "╭╴"
+variable = 'SHELL'
+format = "$symbol"
+disabled = false
+
+[os]
+format = '[$symbol](bold white) '   
+disabled = false
+
+[os.symbols]
+Windows = ' '
+Arch = '󰣇'
+Ubuntu = ''
+Macos = '󰀵'
+Unknown = '󰠥'
+
+[username]
+style_user = 'yellow bold'
+style_root = 'black bold'
+format = '[//](black bold) [$user](#fab387) ' # Peach from Catppuccin Mocha
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+format = '[//](black bold) [$hostname](bold blue) '
+disabled = false
+
+[directory]
+truncation_length = 4
+truncation_symbol = '…/'
+home_symbol = '~'
+read_only = '  '
+format = '[//](black bold) [$path]($style)[$read_only](red) '
+style = 'bold lavender' # Lavender from Catppuccin Mocha
+
+[git_branch]
+symbol = ' '
+format = '[//](black bold) [$symbol\[$branch\]]($style) '
+style = 'bold mauve' # Mauve from Catppuccin Mocha
+
+[git_status]
+disabled = true
+
+[kubernetes]
+format = 'via [󱃾 $context\($namespace\)](bold purple) '
+disabled = false
+
+[python]
+symbol = '󰌠'
+python_binary = ['./venv/bin/python', 'python', 'python3', 'python2']
+format = '[//](black bold) [${symbol} ${pyenv_prefix}(${version} )(\($virtualenv\) )]($style) '
+style = 'green' # Green from Catppuccin Mocha
+
+# Define the Catppuccin Mocha palette
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
