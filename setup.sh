@@ -55,12 +55,26 @@ else
     fi
 fi
 
-REQUIRED_PACKAGES="firefox unzip wofi git man starship zsh zsh-syntax-highlighting neovim wayabr waybar hyprpaper fastfetch fzf vscodium bat tree bluez bluez-utils tofi paru btop podman python-virtualenv steam ttf-liberation lib32-mesa go ntp nmap kubectl helm rsync vscodium grim slurp cargo"
-sudo pacman -S $REQUIRED_PACKAGES --noconfirm
+sudo pacman -S ansible --noconfirm
+ansible-galaxy collection install jacobvhs.ansible_roles_arch --force
+ansible-playbook arch-configuration-management.yml
 
-# Create symlinks for bashrc and zshrc
-ln -s "$HOMEDIR/.config/zshrc" "$HOMEDIR/.zshrc"
-ln -s "$HOMEDIR/.config/bashrc" "$HOMEDIR/.bashrc"
-ln -s "$HOMEDIR/.config/shell_aliases" "$HOMEDIR/.shell_aliases"
+# Function to create symlink if it doesn't exist
+create_symlink() {
+    local target=$1
+    local link=$2
+    if [ ! -L "$link" ]; then
+        ln -s "$target" "$link"
+        echo "Symlink created: $link -> $target"
+    else
+        echo "Symlink already exists: $link"
+    fi
+}
+
+# Create symlinks
+create_symlink "$HOMEDIR/.config/zshrc" "$HOMEDIR/.zshrc"
+create_symlink "$HOMEDIR/.config/bashrc" "$HOMEDIR/.bashrc"
+create_symlink "$HOMEDIR/.config/shell_aliases" "$HOMEDIR/.shell_aliases"
+
 # Generate bat cache
 bat cache --build

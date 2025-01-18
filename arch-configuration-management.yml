@@ -1,0 +1,9 @@
+---
+- name: Arch Linux Configuration Management
+  hosts: localhost
+  become: true
+  roles:
+    - jacobvhs.ansible_roles_arch.arch_desktop
+    - jacobvhs.ansible_roles_arch.arch_dotfiles
+    - jacobvhs.ansible_roles_arch.arch_packages
+    - jacobvhs.ansible_roles_arch.arch_python
