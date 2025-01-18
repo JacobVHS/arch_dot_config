@@ -55,10 +55,6 @@ else
     fi
 fi
 
-sudo pacman -S ansible --noconfirm
-ansible-galaxy collection install jacobvhs.ansible_roles_arch --force
-ansible-playbook arch-configuration-management.yml
-
 # Function to create symlink if it doesn't exist
 create_symlink() {
     local target=$1
