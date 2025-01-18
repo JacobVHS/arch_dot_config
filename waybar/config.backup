@@ -32,8 +32,8 @@
       },
       "sort-by-number": true,
       "persistent-workspaces": {
-        "*": 0  // This will let it show only the active workspaces dynamically
-      }
+        "*": 10, // 5 workspaces by default on every monitor
+      },
     },
     "clock": {
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",

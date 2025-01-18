@@ -24,6 +24,7 @@ alias devops='source ~/.devops/bin/activate'
 
 # Search and open neovim
 alias open='nvim $(fzf)'
+alias vim="nvim"
 
 # Take a screenshot of section
 alias screenshot="grim -g \"\$(slurp)\" ~/Pictures/screenshot_$(date +\%Y-\%m-\%d_\%H-\%M-\%S).png"
