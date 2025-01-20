@@ -7,3 +7,4 @@
     - jacobvhs.ansible_roles_arch.arch_dotfiles
     - jacobvhs.ansible_roles_arch.arch_packages
     - jacobvhs.ansible_roles_arch.arch_python
+    - jacobvhs.ansible_roles_arch.arch_networking
