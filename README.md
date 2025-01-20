@@ -32,7 +32,11 @@ This repository contains the configuration files for managing an Arch Linux setu
    cd ~/.config
    ./setup.sh
    ```
-
+3. Alternatively, you can make use of my Ansible collection to config manage the OS
+  ```bash
+  cd ~/.config/
+  ./config_management.sh
+  ```
 ### Script Behavior
 
 - If the `~/.config` directory does not exist, it will clone the repository.
