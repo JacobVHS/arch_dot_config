@@ -32,7 +32,8 @@ This repository contains the configuration files for managing an Arch Linux setu
    cd ~/.config
    ./setup.sh
    ```
-3. Alternatively, you can make use of my Ansible collection to config manage the OS
+3. Alternatively, you can make use of my Ansible collection to configure manage the OS
+[Ansible Collection](https://github.com/JacobVHS/ansible-roles-arch)
   ```bash
   cd ~/.config/
   ./config_management.sh
