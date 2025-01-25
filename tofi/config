@@ -7,4 +7,14 @@ padding-top = 35%
 result-spacing = 25
 num-results = 5
 font = CaskaydiaCove Nerd Font
-background-color = #000A
+#background-color = #000A
+
+# Catppuccin Mocha
+text-color = #cdd6f4
+prompt-color = #f38ba8
+selection-color = #f9e2af
+background-color = #1e1e2e
+
+hide-cursor=true
+text-cursor=true
+history=true
