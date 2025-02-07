@@ -90,7 +90,8 @@ decoration {
 animations {
     enabled = yes, please :)
 
-    # Bezier curves for smooth animations
+    # Default animations, see https://wiki.hyprland.org/Configuring/Animations/ for more
+
     bezier = easeOutQuint,0.23,1,0.32,1
     bezier = easeInOutCubic,0.65,0.05,0.36,1
     bezier = linear,0,0,1,1
@@ -110,13 +111,10 @@ animations {
     animation = layersOut, 1, 1.5, linear, fade
     animation = fadeLayersIn, 1, 1.79, almostLinear
     animation = fadeLayersOut, 1, 1.39, almostLinear
-
-    # Change workspaces animation to slide
-    animation = workspaces, 1, 1.94, almostLinear, slide
-    animation = workspacesIn, 1, 1.21, almostLinear, slide
-    animation = workspacesOut, 1, 1.94, almostLinear, slide
+    animation = workspaces, 1, 1.94, almostLinear, fade
+    animation = workspacesIn, 1, 1.21, almostLinear, fade
+    animation = workspacesOut, 1, 1.94, almostLinear, fade
 }
-
 
 dwindle {
     pseudotile = true # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below

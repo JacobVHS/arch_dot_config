@@ -31,3 +31,5 @@ alias fzf='fzf --preview "bat --color=always --style=numbers --line-range=:500 {
 # Take a screenshot of section
 alias screenshot="grim -g \"\$(slurp)\" ~/Pictures/screenshot_$(date +\%Y-\%m-\%d_\%H-\%M-\%S).png"
 alias view='feh'
+
+alias code='vscodium'
